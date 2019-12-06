@@ -72,13 +72,38 @@ Crie uma função com as seguintes características:
 */
 
 function novaFuncao(x,y,z) {
-  if(x != null) {
+  if(x !== undefined && y === undefined && z === undefined) {
     return x;
-  } else if (y != null) {
+  }
+  else if (x !== undefined && y !== undefined && z === undefined) {
     return x + y;
+  }
+  else if (x !== undefined && y !== undefined && z !== undefined) {
+    return (x + y) / z;
+  }
+  else if (x === undefined && y === undefined && z === undefined) {
+    return false;
+  } else {
+    return false;
   }
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 
+function novaFuncao(x,y,z) {
+  if(x !== undefined && y === undefined && z === undefined) {
+    return x; //x = 1, retorno = 1
+  }
+  else if (x !== undefined && y !== undefined && z === undefined) {
+    return x + y; //x = 1, y = 2 retorno = 3
+  }
+  else if (x !== undefined && y !== undefined && z !== undefined) {
+    return (x + y) / z; // x = 1, y = 2, z = 2, retorno = 1.5
+  }
+  else if (x === undefined && y === undefined && z === undefined) {
+    return false; //sem nenhum argumento, retorno = false
+  } else {
+    return null;
+  }
+}
 ```
