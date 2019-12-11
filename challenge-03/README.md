@@ -35,21 +35,7 @@ for chamado.
 */
 
 pessoa.fazerAniversario = function() {
-  return pessoa.idade++;
-}
-
-pessoa.fazerAniversario();
-
-let pessoa = {
-  nome: string;
-  sobrenome: string;
-  sexo: string;
-  idade: number;
-  altura: number;
-  peso: number;
-  andando: false;
-  caminhouQuantosMetros: 0;
-  fazerAniversario: [Function];
+  pessoa.idade++;
 }
 
 /*
@@ -62,25 +48,38 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-?
+
+pessoa.andar = function(metrosCaminhados) {
+  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + metrosCaminhados;
+  pessoa.andando = true;
+}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-?
+
+pessoa.parar = function() {
+  andando = false;
+}
+
 
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-?
+pessoa.nomeCompleto = function() {
+  pessoa.nome = Marjorie;
+  pessoa.sobrenome = Nunes;
+  let frase = 'Olá! Meu nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + "!"
+  return frase
+}
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-?
+pessoa.idade = 
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
